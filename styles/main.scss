@@ -1,8 +1,6 @@
+@import './constants/colors';
+@import './constants/typography';
+
 @import './base/fonts';
-
-$color: #123456;
-$font-family: 'Noto Sans KR', sans-serif;
-
-* {
-  font-family: $font-family;
-}
+@import './base/normalize';
+@import './base/reset';
