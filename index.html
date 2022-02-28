@@ -18,120 +18,98 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <div>
-        <strong class="tag-red">특가</strong>
-        <div class="tag-gray">무료배송</div>
-        <strong class="tag-green">첫 리뷰 두 배 적립</strong>
-      </div>
+    <header class="gnb">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="gnb-wrapper">
+              <div class="gnb-left">
+                <h1 class="logo">
+                  <a href="/">
+                    <img src="./assets/images/logo.svg" alt="내일의 집" />
+                  </a>
+                </h1>
 
-      <div class="avatar-32">
-        <img src="./assets/images/img-user-01.jpg" alt="4달라 아저씨" />
-      </div>
+                <nav class="gnb-nav sm-hidden">
+                  <h2 class="visually-hidden">메뉴</h2>
+                  <ul class="gnb-nav-list">
+                    <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
+                    <li class="gnb-nav-item is-active"><a href="/">스토어</a></li>
+                    <li class="gnb-nav-item"><a href="/">인테리어 시공</a></li>
+                  </ul>
+                </nav>
 
-      <div>
-        <div class="star-rating-13">
-          <i class="ic-star is-active"></i>
-          <i class="ic-star is-active"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-        </div>
+                <button class="gnb-icon-button is-menu sm-only" type="button" aria-label="메뉴 열기 버튼">
+                  <i class="ic-menu"></i>
+                </button>
+              </div>
 
-        <div class="star-rating-16">
-          <i class="ic-star is-active"></i>
-          <i class="ic-star is-active"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-        </div>
+              <div class="gnb-right">
+                <div class="input-group lg-only">
+                  <i class="ic-search" aria-hidden></i>
+                  <input class="form-input" type="text" placeholder="스토어 검색" />
+                </div>
 
-        <div class="star-rating-20">
-          <i class="ic-star is-active"></i>
-          <i class="ic-star is-active"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-        </div>
-        <div class="star-rating-24">
-          <i class="ic-star is-active"></i>
-          <i class="ic-star is-active"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-          <i class="ic-star"></i>
-        </div>
-      </div>
+                <!-- NOTE:로그인을 한 경우 -->
+                <div class="button-group">
+                  <button class="gnb-icon-button is-search lg-hidden" type="button" aria-label="검색창 열기 버튼">
+                    <i class="ic-search"></i>
+                  </button>
 
-      <div>
-        <div class="price-off">
-          <strong class="amount">40,000</strong>
-          <span class="currency">원</span>
-        </div>
-        <div class="price-16">
-          <strong class="amount">40,000</strong>
-          <span class="currency">원</span>
-        </div>
-        <div class="price-20">
-          <strong class="amount">40,000</strong>
-          <span class="currency">원</span>
-        </div>
-        <div class="price-32">
-          <strong class="amount">40,000</strong>
-          <span class="currency">원</span>
-        </div>
-      </div>
+                  <a href="/" class="gnb-icon-button sm-hidden" aria-label="스크랩북 페이지로 이동">
+                    <i class="ic-bookmark"></i>
+                  </a>
 
-      <div>
-        <div>
-          <button type="button" class="btn-primary btn-32">버튼입니다</button>
-          <button type="button" class="btn-secondary btn-32">버튼입니다</button>
-          <button type="button" class="btn-outlined btn-32">버튼입니다</button>
-          <button type="button" class="btn-ghost btn-32">버튼입니다</button>
-        </div>
+                  <a href="/" class="gnb-icon-button sm-hidden" aria-label="내 소식 페이지로 이동">
+                    <i class="ic-bell"></i>
+                  </a>
 
-        <div>
-          <button type="button" class="btn-primary btn-40">버튼입니다</button>
-          <button type="button" class="btn-secondary btn-40">버튼입니다</button>
-          <button type="button" class="btn-outlined btn-40">버튼입니다</button>
-          <button type="button" class="btn-ghost btn-40">버튼입니다</button>
-        </div>
+                  <a class="gnb-icon-button is-cart" href="/" aria-label="장바구니 페이지로 이동">
+                    <i class="ic-cart"></i>
+                    <strong class="badge">5</strong>
+                  </a>
 
-        <div>
-          <button type="button" class="btn-primary btn-48">버튼입니다</button>
-          <button type="button" class="btn-secondary btn-48">버튼입니다</button>
-          <button type="button" class="btn-outlined btn-48">버튼입니다</button>
-          <button type="button" class="btn-ghost btn-48">버튼입니다</button>
-        </div>
+                  <div class="my-menu sm-hidden">
+                    <button class="my-menu-button is-active" type="button" aria-label="마이메뉴 열기 버튼">
+                      <img src="./assets/images/img-user-01.jpg" alt="4달라 아저씨" />
+                    </button>
 
-        <div>
-          <button type="button" class="btn-primary btn-55">버튼입니다</button>
-          <button type="button" class="btn-secondary btn-55">버튼입니다</button>
-          <button type="button" class="btn-outlined btn-55">버튼입니다</button>
-          <button type="button" class="btn-ghost btn-55">버튼입니다</button>
-        </div>
+                    <div class="my-menu-content">
+                      <ul class="my-menu-list">
+                        <li class="my-menu-item"><a href="/">마이페이지</a></li>
+                        <li class="my-menu-item"><a href="/">나의 쇼핑</a></li>
+                        <li class="my-menu-item"><a href="/">이벤트</a></li>
+                        <li class="my-menu-item"><button type="button">로그아웃</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-        <div>
-          <button disabled type="button" class="btn-primary btn-55">버튼입니다</button>
-          <button disabled type="button" class="btn-secondary btn-55">버튼입니다</button>
-          <button disabled type="button" class="btn-outlined btn-55">버튼입니다</button>
-          <button disabled type="button" class="btn-ghost btn-55">버튼입니다</button>
+                <!-- NOTE:로그인을 안 한 경우 -->
+                <!-- <div class="button-group">
+                  <button class="gnb-icon-button is-search lg-hidden" type="button" aria-label="검색창 열기 버튼">
+                    <i class="ic-search"></i>
+                  </button>
+
+                  <a class="gnb-icon-button is-cart" href="/" aria-label="장바구니 페이지로 이동">
+                    <i class="ic-cart"></i>
+                  </a>
+
+                  <div class="gnb-auth sm-hidden">
+                    <a href="/">로그인</a>
+                    <a href="/">회원가입</a>
+                  </div>
+                </div> -->
+
+                <button class="sm-hidden btn-primary btn-40" type="button">
+                  글쓰기
+                  <i class="ic-chevron" aria-hidden></i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div>
-        <div class="select-group">
-          <select class="form-select">
-            <option value="1">선택사항 1</option>
-            <option value="2">선택사항 2</option>
-            <option value="3">선택사항 3</option>
-            <option value="4">선택사항 4</option>
-            <option value="5">선택사항 5</option>
-          </select>
-          <i class="ic-caret" aria-hidden></i>
-        </div>
-
-        <input type="text" placeholder="스토어 검색" />
-      </div>
-    </div>
+    </header>
   </body>
 </html>

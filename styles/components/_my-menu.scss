@@ -1,0 +1,77 @@
+.my-menu {
+  $button-size: 32px;
+  $tooltip-size: 12px;
+
+  position: relative;
+
+  &-button {
+    border: 3px solid $white;
+    border-radius: 50%;
+    height: $button-size;
+    overflow: hidden;
+    transition: border-color 200ms ease-in-out;
+    width: $button-size;
+
+    &:hover,
+    &.is-active {
+      border-color: $blue;
+    }
+
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &-content {
+    @include pos-center-x;
+    border-radius: 4px;
+    box-shadow: $dropdown-shadow;
+    top: $button-size + $tooltip-size + 8px;
+
+    &::before,
+    &::after {
+      @include pos-center-x;
+      border-bottom: #{$tooltip-size - 1px} solid $border;
+      border-left: 10px solid transparent;
+      border-right: #{$tooltip-size - 1px} solid transparent;
+      border-top: 10px solid transparent;
+      content: '';
+      display: block;
+      height: 0;
+      top: -#{$tooltip-size * 2 - 3px};
+      width: 0;
+    }
+
+    &::after {
+      border-bottom-color: $white;
+      top: -#{$tooltip-size * 2 - 5px};
+    }
+  }
+
+  &-list {
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 4px;
+    padding: 8px;
+    width: 200px;
+  }
+
+  &-item {
+    a,
+    button {
+      @include flexbox(start);
+      @include text-style(16, $primary);
+      border-radius: 2px;
+      height: 44px;
+      padding: 0 8px;
+      width: 100%;
+
+      &:hover {
+        background-color: $background;
+      }
+    }
+  }
+}
