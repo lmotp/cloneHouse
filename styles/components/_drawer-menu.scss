@@ -1,3 +1,5 @@
+//sass-lint:disable-all
+
 .drawer-menu {
   $drawer-menu-item-height: 36px;
   $drawer-menu-list-padding: 20px;
@@ -99,7 +101,6 @@
     }
 
     .ic-new {
-      color: $red;
       font-size: 16px;
     }
   }
