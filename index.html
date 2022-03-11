@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -102,7 +103,7 @@
                       <strong class="badge">5</strong>
                     </a>
 
-                    <div class="my-menu sm-hidden is-active">
+                    <div class="my-menu sm-hidden">
                       <button class="my-menu-button" type="button" aria-label="마이메뉴 열기 버튼">
                         <img src="./assets/images/img-user-01.jpg" alt="4달라 아저씨" />
                       </button>
@@ -247,6 +248,174 @@
               </div>
             </div>
           </div>
+
+          <div class="col-sm-4 col-md-6 col-lg-5">
+            <section class="product-info">
+              <header class="product-info-header">
+                <a class="info-brand" href="/">보아르</a>
+                <h1 class="info-title">캠핑/가정용 400W 미니멀 전기히터 VO-HT015 (안전장치기능탑재)</h1>
+
+                <div class="info-review">
+                  <div class="star-rating">
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                    <i class="ic-star is-active"></i>
+                  </div>
+
+                  <p>
+                    <strong>566</strong>
+                    <span class="sm-hidden">개 리뷰</span>
+                  </p>
+                </div>
+              </header>
+
+              <!-- NOTE : 모바일용 가격 -->
+              <div class="product-info-price sm-only">
+                <div class="info-original-price">
+                  <div class="discount-rate">
+                    <span class="rate">34</span>
+                    <span class="percent">%</span>
+                  </div>
+
+                  <div class="price-off">
+                    <strong class="amount">49,900</strong>
+                    <span class="currency sm-hidden">원</span>
+                  </div>
+                </div>
+
+                <div class="info-sale-price">
+                  <div class="price-20">
+                    <strong class="amount">32,900</strong>
+                    <span class="currency">원</span>
+                  </div>
+
+                  <strong class="tag-red">특가</strong>
+                </div>
+
+                <p class="info-point">
+                  <strong aria-label="987 포인트">987P</strong> 적립해드립니다. (VIP 3배 혜택 적용됨)
+                </p>
+              </div>
+
+              <!-- NOTE : 테블릿 이후 가격 -->
+              <div class="product-info-price sm-hidden">
+                <div class="info-price-wrapper">
+                  <div class="discount-rate">
+                    <span class="rate">34</span>
+                    <span class="percent">%</span>
+                  </div>
+
+                  <div class="info-price">
+                    <div class="price-off">
+                      <strong class="amount">49,900</strong>
+                      <span class="currency">원</span>
+                    </div>
+
+                    <div class="info-sale-price">
+                      <div class="price-32">
+                        <strong class="amount">32,900</strong>
+                        <span class="currency">원</span>
+                      </div>
+
+                      <strong class="tag-red">특가</strong>
+                    </div>
+                  </div>
+                </div>
+                <p class="info-point">
+                  <strong aria-label="987 포인트">987P</strong> 적립해드립니다. (VIP 3배 혜택 적용됨)
+                </p>
+              </div>
+
+              <div class="product-info-delivery">
+                <span>일반택배</span>
+                <strong class="tag-gray">무료배송</strong>
+              </div>
+            </section>
+
+            <form class="order-form lg-only" action="/" method="post">
+              <div class="order-inputs">
+                <div class="select-group is-active" id="select-1" required>
+                  <select class="form-select">
+                    <option value="1">선택</option>
+                    <option value="1">선택사항 1</option>
+                    <option value="2">선택사항 2</option>
+                    <option value="3">선택사항 3</option>
+                    <option value="4">선택사항 4</option>
+                    <option value="5">선택사항 5</option>
+                  </select>
+                  <i class="ic-caret" aria-hidden></i>
+                </div>
+
+                <div class="select-group">
+                  <select class="form-select" id="select-2">
+                    <option value="1">추가상품 (선택)</option>
+                    <option value="1">선택사항 1</option>
+                    <option value="2">선택사항 2</option>
+                    <option value="3">선택사항 3</option>
+                    <option value="4">선택사항 4</option>
+                    <option value="5">선택사항 5</option>
+                  </select>
+                  <i class="ic-caret" aria-hidden></i>
+                </div>
+              </div>
+
+              <div class="order-chekouts">
+                <ul class="checkout-list">
+                  <li class="checkout-item">
+                    <div class="checkout-card">
+                      <header class="checkout-header">
+                        <h4 class="checkout-title">
+                          추가상품 - 맛있는 감귤은 직배송 / 제주도 귤 판매 1위 믿고 구매하세요.
+                        </h4>
+                        <button class="delete-button" type="button" aria-label="해당 버튼을 누르면은 상품 삭제">
+                          <i class="ic-close" aria-hidden></i>
+                        </button>
+                      </header>
+
+                      <footer class="checkout-footer">
+                        <div class="checkout-select">
+                          <select id="checkout-item-1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                          <i class="ic-caret" aria-hidden></i>
+                        </div>
+
+                        <output class="checkout-output" for="checkout-item-1">
+                          <div class="price-16">
+                            <strong class="amount">32,900</strong>
+                            <span class="currency">원</span>
+                          </div>
+                        </output>
+                      </footer>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <dl class="order-summary">
+                <dt>주문금액</dt>
+                <dd>
+                  <output for="select-1 select-2">
+                    <div class="price-20">
+                      <strong class="amount">0</strong>
+                      <span class="currency">원</span>
+                    </div>
+                  </output>
+                </dd>
+              </dl>
+
+              <div class="button-group">
+                <button class="btn-outlined btn-55" type="button">장바구니</button>
+                <button class="btn-primary btn-55" type="submit">바로구매</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </main>
@@ -289,7 +458,6 @@
           </div>
         </div>
       </div>
-      padding: 16px 0; padding: 16px 0; padding: 16px 0;
     </footer>
 
     <aside class="sidebar sm-only">
@@ -450,5 +618,7 @@
     </aside>
 
     <div class="overlay" aria-hidden></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./js/productCarousel.js"></script>
   </body>
 </html>

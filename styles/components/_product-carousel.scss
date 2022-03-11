@@ -1,0 +1,122 @@
+.product-carousel {
+  $grid-margin: 15px;
+
+  position: relative;
+
+  &-slider {
+    margin: 0 -#{$grid-margin};
+  }
+
+  &-thumbnail {
+    @include pos-center-x;
+    bottom: 16px;
+  }
+
+  .thumbnail-list {
+    @include flexbox;
+  }
+
+  .thumbnail-item {
+    @include flexbox;
+    margin: 0 4px;
+
+    &.tns-nav-active {
+      button {
+        opacity: 1;
+        transform: scale(1.3333333);
+      }
+    }
+
+    button {
+      background-color: $white;
+      border-radius: 50%;
+      height: 6px;
+      opacity: 0.7;
+      transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+      width: 6px;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  @include responsive(T) {
+    padding-right: 30px;
+
+    &-slider {
+      border-radius: 4px;
+      margin: 0 0 8px;
+      overflow: hidden;
+    }
+
+    &-thumbnail {
+      position: static;
+      transform: none;
+    }
+
+    .thumbnail-list {
+      justify-content: flex-start;
+    }
+
+    .thumbnail-item {
+      margin: 0 8px 0 0;
+
+      &.tns-nav-active {
+        button {
+          border: 2px solid $blue;
+          transform: none;
+        }
+      }
+
+      button {
+        @include flexbox;
+        border-radius: 4px;
+        height: 56px;
+        opacity: 1;
+        overflow: hidden;
+        width: 56px;
+      }
+
+      img {
+        display: block;
+        width: 56px;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    @include flexbox(end, start);
+    flex-direction: row-reverse;
+
+    &-slider {
+      height: 500px;
+      width: 500px;
+    }
+
+    &-thumbnail {
+      margin-right: 8px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      margin-bottom: 8px;
+      margin-right: 0;
+
+      button,
+      img {
+        height: 75px;
+        width: 75px;
+      }
+    }
+  }
+}

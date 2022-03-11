@@ -24,7 +24,7 @@
     }
 
     a {
-      @include text-style(14, $dark);
+      @include text-style(13, $dark);
       @include inline-flexbox;
       border-bottom: 2px solid transparent;
       font-weight: 700;
