@@ -1,6 +1,5 @@
 .lnb {
   $lnb-link-padding: 8px;
-  $gird-margin: $sm-margin + $gutter / 2;
 
   @include no-scrollbar;
   background-color: $white;
@@ -10,8 +9,8 @@
     @include inline-flexbox(start);
     border-bottom: 1px solid $border;
     height: $lnb-height-sm;
-    margin-left: -#{$gird-margin};
-    padding: 0 #{$gird-margin - $lnb-link-padding};
+    margin-left: -#{$grid-margin};
+    padding: 0 #{$grid-margin - $lnb-link-padding};
     white-space: nowrap;
   }
 
