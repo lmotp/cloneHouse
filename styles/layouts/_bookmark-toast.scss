@@ -1,0 +1,78 @@
+.bookmark-toast {
+  $close-button-size: 36px;
+
+  @include flexbox(between);
+  background-color: $white;
+  bottom: 0;
+  box-shadow: $popup-reversed-shadow;
+  display: none;
+  height: 56px;
+  left: 0;
+  padding-left: $close-button-size;
+  padding-right: $grid-margin;
+  position: fixed;
+  width: 100%;
+  z-index: $bookmark-toast-level;
+
+  &.is-active {
+    display: flex;
+  }
+
+  .bookmark-title {
+    @include text-style(13, $primary);
+    font-weight: 400;
+  }
+
+  .close-button {
+    @include pos-center-y;
+    @include inline-flexbox;
+    color: $tertiary;
+    font-size: 20px;
+    height: $close-button-size;
+    left: 0;
+    width: $close-button-size;
+
+    &:active {
+      color: $secondary;
+    }
+  }
+
+  .button-group {
+    @include flexbox(end);
+
+    a {
+      margin-right: 4px;
+    }
+  }
+
+  @include responsive(D) {
+    @include pos-center-x(fixed);
+    border-radius: 8px;
+    bottom: 40px;
+    box-shadow: $popup-shadow;
+    height: 80px;
+    max-width: 480px;
+    overflow: hidden;
+    padding-left: 56px;
+    padding-right: 20px;
+
+    .bookmark-title {
+      @include text-style(16);
+    }
+
+    .close-button {
+      font-size: 24px;
+      left: (56px - $close-button-size) / 2;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+
+    .button-group {
+      a {
+        margin-right: 8px;
+      }
+    }
+  }
+}

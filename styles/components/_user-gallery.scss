@@ -1,0 +1,115 @@
+.user-gallery {
+  margin: 0 -#{$grid-margin};
+  overflow: hidden;
+
+  &-slider {
+    margin-bottom: 4px;
+    position: relative;
+  }
+
+  &-controls {
+    @include pos-center;
+    @include flexbox(between);
+    padding: 0 52px;
+    width: 100%;
+
+    .control-button {
+      @include flexbox;
+      background-color: $white;
+      border-radius: 50%;
+      color: $primary;
+      font-size: 28px;
+      height: 40px;
+      transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+      width: 40px;
+
+      &.is-prev {
+        i {
+          margin-left: -2px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &.is-next {
+        i {
+          margin-right: -2px;
+          transform: rotate(-90deg);
+        }
+      }
+
+      &:hover {
+        background-color: $blue;
+        color: $white;
+      }
+
+      &[disabled] {
+        visibility: hidden;
+      }
+    }
+  }
+
+  .thumbnail-list {
+    @include flexbox(start);
+    overflow-x: auto;
+    padding-left: 2px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .thumbnail-item {
+    margin-right: 4px;
+
+    &.tns-nav-active {
+      button {
+        border: 3px solid $blue;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    button {
+      @include flexbox;
+      border-radius: 4px;
+      height: 64px;
+      overflow: hidden;
+      width: 64px;
+
+      img {
+        display: block;
+        height: 64px;
+        object-fit: cover;
+        width: 64px;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    margin: 0;
+
+    &-slider {
+      margin-bottom: 6px;
+    }
+
+    .thumbnail-list {
+      padding-left: 0;
+    }
+
+    .thumbnail-item {
+      margin-right: 6px;
+
+      button {
+        height: 75px;
+        width: 75px;
+
+        img {
+          height: 75px;
+          width: 75px;
+        }
+      }
+    }
+  }
+}

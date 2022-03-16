@@ -1,0 +1,72 @@
+.gallery-card {
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+
+  &-image {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+
+    img {
+      @include pos-center;
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &-detail {
+    @include flexbox(start);
+    background-color: rgba($black, 0.4);
+    bottom: 0;
+    height: 54px;
+    left: 0;
+    padding: 0 16px;
+    position: absolute;
+    width: 100%;
+
+    .avatar-32,
+    .order {
+      flex-shrink: 0;
+    }
+
+    .username,
+    .order {
+      @include text-style(16, $white);
+    }
+
+    .avatar-32 {
+      margin-right: 8px;
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+
+    .username {
+      @include truncate;
+      flex-grow: 1;
+      font-weight: 700;
+      padding-right: 8px;
+
+      &:active {
+        color: $blue;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-detail {
+      .avatar-32:hover {
+        opacity: 0.4;
+      }
+
+      .username:hover {
+        color: $blue;
+      }
+    }
+  }
+}
